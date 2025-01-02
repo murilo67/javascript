@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #click {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20pt;
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="click">
+        Interaja...
+    </div> 
+    <!--
+    Eventos DOM
+
+    mouseenter -> o usuário  entrou com o mouse na div
+    mousemove -> o usuário se moveu com o mouse pela div
+    mousedown -> o usuário clicou e segurou com mouse dentro da div
+    mouseup -> o usuário clicou, segurou e soltou o mouse dentro da caixa
+    click -> o usuário clicou
+    mouseout -> o mouse saiu da div
+
+    on + evento='nome da função' -> HTML
+
+    <div id="click" onclick='clicou()' onmouseenter="entrou()" onmouseout="saiu()">
+        Interaja...
+    </div> 
+
+    bloco.addEventListener('click', clicou) -> JavaScript
+    -->
+    <script>
+        var bloco = window.document.getElementById('click')
+
+        bloco.addEventListener('click', clicou)
+        bloco.addEventListener('mouseenter', entrou)
+        bloco.addEventListener('mouseout', saiu)
+        bloco.addEventListener('mousedown', segurou)
+
+
+        function clicou() {
+            bloco.innerHTML = 'Clicou!'
+            bloco.style.backgroundColor = 'blue'
+        }
+
+        function entrou() {
+            bloco.innerHTML = 'Entrou!'
+            bloco.style.backgroundColor = 'red'
+        }
+
+        function saiu() {
+            bloco.innerHTML = 'Saiu!'
+            bloco.style.backgroundColor = 'purple'
+        }
+    </script>
+</body>
+</html>
