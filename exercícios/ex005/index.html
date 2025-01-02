@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores em JavaScript</title>
+</head>
+<body>
+    <h1>Operadores em JavaScript</h1>
+    <script>
+        /*
+        Ordem de precedência dos operadores (de cima para baixo)
+
+        () -> 1°: os parênteses
+        ** -> 2°: as potências
+        * / % 3°: multiplicação, divisão inteira e resto da divisão (dependendo da ordem da conta)
+        + - -> 4°: Soma e subtração
+
+        Auto-atribuições
+        var n = 3
+        n = n + 4 -> Agora ao invés de n ser 3 n vai ser a soma dele mesmo mais 3 (n = 7)
+
+        Simplificando as auto-atribuições
+        n += 4 (n = n + 4)
+
+        Operadores de Incremento
+        var x = 5
+        x = x + 1 -> x += 1 -> x++ = ++x
+        x = x - 1 -> x -= 1 -> x-- = --x
+        */
+
+        var num1 = window.prompt('Digite um número:')
+        var num2 = window.prompt('Digite outro número: ')
+        var multiplica = Number(num1) * Number(num2)
+        window.alert(`A multiplicação dá ${multiplica}`)
+    </script>
+</body>
+</html>
