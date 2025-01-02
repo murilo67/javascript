@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passoa com DOM</title>
+    <style>
+        body {
+            background-color: rgb(63, 93, 148);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="click">
+        Clique em mim
+    </div>
+    <script>
+        /*
+        DOM (Document Object Model)
+
+        Árvore DOM (desse arquivo) 
+        window(location, document, history)
+        location -> diz qual é a url, a página atual/anterior
+        document -> documento atual
+        history -> guarda de onde voce veio, para onde você vai, etc
+
+        document(html)
+        html, vai mexer na parte html do site
+
+        html(head, body)
+
+        head(meta, title)
+
+        body(h1, p, p[2], div)
+
+        p[2](strong)
+
+        window.document.write('') -> escreve no JavaScript para o html
+
+        Selecionando elementos
+
+        por Marca -> getElementsByTagName('tag')[ordem numérica de cima para baixo caso tenha o Elements no plural]
+        por Id -> getElementById('id')
+        por Nome -> getElementsByName('name')
+        por Classe -> getElementsByClassName('class')[]
+        por Seletor -> querySelector(#click) ou querySelectorAll()
+
+        p1.innerText -> vai escrever o texto que está dentro de p bruto sem a formatação
+        p1.innerHTML -> vai escrever o texto que está dentro de p com as formatações/tags filhas
+
+        body.style.backgroundColor = 'color'
+        */
+
+        var body = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var d = window.document.querySelector('div#click')
+        d.innerHTML = 'Olá'
+    </script>
+</body>
+</html>

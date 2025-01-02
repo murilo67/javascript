@@ -9,7 +9,7 @@
     <h1>Operadores em JavaScript</h1>
     <script>
         /*
-        Ordem de precedência dos operadores (de cima para baixo)
+        Ordem de precedência dos operadores aritméticos (de cima para baixo)
 
         () -> 1°: os parênteses
         ** -> 2°: as potências
@@ -27,6 +27,50 @@
         var x = 5
         x = x + 1 -> x += 1 -> x++ = ++x
         x = x - 1 -> x -= 1 -> x-- = --x
+
+        Operadores relacionais
+        var n = 5
+        n > 3 -> n maior que 3 -> true
+        n < 4 -> n menor que 6 -> false
+        n >= 2 -> n maior ou igual a 2 -> true
+        n <= 9 -> n menor ou igual a 9 -> true
+        n == 5 -> n igual a 5 -> true
+        n != 8 -> n diferente de 8 -> true
+
+        Operadores de identidade
+        5 == '5' -> true -> são de mesmos valores mas de tipos diferentes, o == ele diz se tal valor é igual a tal valor por isso o true
+        5 === '5' -> false -> sinal de identico, vai verificar se os dois 5 tem o mesmo valor e tipo
+        5 !== '5' -> true -> verifica se os tipos e valores internos são diferentes
+
+        Operadores lógicos
+        1°: ! -> negação
+        2°: && -> conjunção (e)
+        3°: || -> disjunção (ou)
+
+        Negação:
+        !true -> false
+        !false -> true
+
+        Conjunção:
+        true && true -> true
+        true && false -> false
+        false && false -> false
+        false && true -> false
+
+        Disjunção:  
+        true || true -> true
+        true || false -> true
+        false || false -> false
+        false || true -> true
+
+        Ordem de precêndencia dos operadores
+
+        1°: Operadores aritméticos
+        2°: Operadores relacionais
+        3°: Operadores lógicos
+
+        Operador ternário
+        média >= 7 ? 'Aprovado' : 'Reprovado' -> a média é maior que >= 7, true -> 'Aprovado' e false -> 'Reprovado'
         */
 
         var num1 = window.prompt('Digite um número:')
