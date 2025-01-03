@@ -40,7 +40,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hora do dia</title>
 </head>
-<body>
+<body onload="carregar()"> <!-- Quando a página for carregada -->
     <h1>Hora do Dia</h1>
     <div id="horario">
         <div id="texto"></div>
@@ -49,27 +49,30 @@
     <p>&copy;CursoemVídeo</p>
 
     <script>
-        var hora = new Date().getHours()
-        var texto = window.document.getElementById('texto')
-        var imagem = window.document.getElementById('imagem')
-        if (hora >= 6 && hora <= 11) {
-            texto.innerHTML = `<p>Agora são ${hora}h</p>`
-            imagem.innerHTML += '<img src="imagens/manha.png" alt="Manhã">'
-            imagem.style.textAlign = 'center'
-            window.document.body.style.backgroundColor = 'rgb(217, 183, 123)'
+        function carregar(){
+            var hora = new Date().getHours()
+            var texto = window.document.getElementById('texto')
+            var imagem = window.document.getElementById('imagem')
+            if (hora >= 6 && hora <= 11) {
+                texto.innerHTML = `<p>Agora são ${hora}h</p>`
+                imagem.innerHTML += '<img src="imagens/manha.png" alt="Manhã">'
+                imagem.style.textAlign = 'center'
+                window.document.body.style.backgroundColor = '#bda470'
+            }
+            if (hora >= 12 && hora <= 18) {
+                texto.innerHTML = `<p>Agora são ${hora}h</p>`
+                imagem.innerHTML += '<img src="imagens/tarde.png" alt="Tarde">'
+                imagem.style.textAlign = 'center'
+                window.document.body.style.backgroundColor = 'rgb(161, 93, 66)'
+            }
+            if (hora >= 19 && hora <= 23) {
+                texto.innerHTML = `<p>Agora são ${hora}h</p>`
+                imagem.innerHTML += '<img src="imagens/noite.png" alt="Noite">'
+                imagem.style.textAlign = 'center'
+                window.document.body.style.backgroundColor = 'rgb(63, 63, 63)'
+            }
         }
-        if (hora >= 12 && hora <= 18) {
-            texto.innerHTML = `<p>Agora são ${hora}h</p>`
-            imagem.innerHTML += '<img src="imagens/tarde.png" alt="Tarde">'
-            imagem.style.textAlign = 'center'
-            window.document.body.style.backgroundColor = 'rgb(161, 93, 66)'
-        }
-        if (hora >= 19 && hora <= 23) {
-            texto.innerHTML = `<p>Agora são ${hora}h</p>`
-            imagem.innerHTML += '<img src="imagens/noite.png" alt="Noite">'
-            imagem.style.textAlign = 'center'
-            window.document.body.style.backgroundColor = 'rgb(63, 63, 63)'
-        }
+            
 
     </script>
 </body>
