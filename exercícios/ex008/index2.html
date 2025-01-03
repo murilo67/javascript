@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu país</title>
+</head>
+<body>
+    <h1>Sistema de países</h1>
+    <input type="text" name="texto" id="itexto" placeholder="Digite seu país aqui..." autocomplete="off">
+    <input type="submit" value="Enviar" onclick="verificarPais()">
+    <div id="res"></div>
+    <script>
+        function verificarPais() {
+            var pais = window.document.getElementById('itexto')
+            var resposta = window.document.getElementById('res')
+            resposta.innerHTML = `<p>Vivendo em ${pais.value}</p>`
+            if (pais.value == 'Brasil' || pais.value == 'Brazil') {
+                resposta.innerHTML += '<p>Você é brasileiro(a)</p>'
+            } else {
+                resposta.innerHTML += `<p>Você é estrangeiro(a)</p>`
+            }
+        }  
+    </script>
+</body>
+</html>

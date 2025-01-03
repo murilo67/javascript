@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        body {
+            background-color: rgb(63, 63, 63);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        div > p {
+            padding-top: 15px;
+            color: black;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+        }
+
+        img {
+            border-radius: 100%;
+            width: 300px;
+            height: 300px
+        }
+        
+        div#horario {
+            background-color: white;
+            width: 600px;
+            height: 370px;
+            margin: auto;
+            border-radius: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+</head>
+<body>
+    <h1>Hora do Dia</h1>
+    <div id="horario">
+        <div id="texto"></div>
+        <div id="imagem"></div>
+    </div>
+    <p>&copy;CursoemVídeo</p>
+
+    <script>
+        //var hora = new Date().getHours()
+        var hora = 19
+        var texto = window.document.getElementById('texto')
+        var imagem = window.document.getElementById('imagem')
+        if (hora >= 6 && hora <= 11) {
+            texto.innerHTML = `<p>Agora são ${hora}h</p>`
+            imagem.innerHTML += '<img src="imagens/manha.png" alt="Manhã">'
+            imagem.style.textAlign = 'center'
+            window.document.body.style.backgroundColor = 'rgb(217, 183, 123)'
+        }
+        if (hora >= 12 && hora <= 18) {
+            texto.innerHTML = `<p>Agora são ${hora}h</p>`
+            imagem.innerHTML += '<img src="imagens/tarde.png" alt="Tarde">'
+            imagem.style.textAlign = 'center'
+            window.document.body.style.backgroundColor = 'rgb(161, 93, 66)'
+        }
+        if (hora >= 19 && hora <= 23) {
+            texto.innerHTML = `<p>Agora são ${hora}h</p>`
+            imagem.innerHTML += '<img src="imagens/noite.png" alt="Noite">'
+            imagem.style.textAlign = 'center'
+            window.document.body.style.backgroundColor = 'rgb(63, 63, 63)'
+        }
+
+    </script>
+</body>
+</html>
